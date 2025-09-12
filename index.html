@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>industriayservicioskarolina</title>
+<!--box-sizing:border-box tamaño total que ocupada la caja en la pantalla-->
+<!-- padding: espacio interno que rodea el contenido de elemento, separando de su borde-->
+<!-- header agrupar introductorio como logotipo, titulo o secciones-->
+<!-- margin crear y controlar el espacio vacío alrededor de un elemento-->
+<style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.6;
+      color:#333;}
+
+    header{
+      background:#004aad;
+      color:#fff;
+      text-align:center;
+      padding:5px 5px;
+    }
+    header h1{
+      margin-bottom:10px;
+      font-size:2.2rem;
+    }
+    header p{
+      font-size:1.2rem;
+    }
+
+    /* Carousel */
+    .carousel{
+      position:relative;
+      width:100%;
+      max-height:450px;
+      overflow:hidden;
+    }
+    .carousel img{
+      width:100%;
+      height:450px;
+      object-fit:cover;
+      display:none;
+    }
+    .carousel img.active{
+      display:block;
+      animation:fade 1.5s;
+    }
+    @keyframes fade{from{opacity:0.4}to{opacity:1}}
+
+    section{padding:50px 20px;max-width:1000px;margin:auto;}
+    section h2{color:#004aad;margin-bottom:20px;text-align:center;}
+
+    /* Videos */
+    .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+    .videos iframe{width:100%;height:200px;border:none;border-radius:8px;}
+
+    /* Footer */
+    footer{background:#004aad;color:#fff;text-align:center;padding:20px;}
+    .social{margin-top:10px;}
+    .social a{margin:0 10px;color:white;font-size:1.5rem;text-decoration:none;transition:0.3s;}
+    .social a:hover{color:#ffd700;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>INDUSTRIA Y SERVICIOS KAROLINA SAC</h1>
+    <p>Transporte Fluvil y Terrestre</p>
+    <br>
+    <p>Conectando caminos y ríos, uniendo destinos</p>
+  </header>
+  <!-- Carousel -->
+  <div class="carousel">
+    <img src="embarcacion2.jpeg" class="active">
+    <img src="contodolluvia.jpeg">
+    <img src="barcaza.jpeg" >
+    <img src="470.jpeg">
+    <img src="350.jpeg">
+    <img src="vyc.jpeg">
+    <img src="vol.jpeg">
+  </div>
+ 
+    <!-- Conoce de mi -->
+
+<style>
+    
+    body{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 1.6;
+        color: #0f0f0f;
+        
+    }
+
+contenedor{
+    padding: 10px;
+    height: 300px;
+    color: #f0e3e3;
+ 
+}
+contenedor h3{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+contenedor p{
+    font-size: 18px;
+    text-align:center;
+}
+.contenedor-1{
+    position: relative;
+        display:flex;
+        padding: 80px;
+        height:480px;
+        background-color:rgb(7, 7, 7);
+        text-align: left;
+    }
+
+</style>
+<body>
+<div class="contenedor-1">
+    <img src="trabajando.png" width="1000">
+
+<contenedor>
+    <h3>CONOCE MÁS DE MI</h3>
+<p>Somos una empresa dedicada al alquiler de maquinaria, alquiler de 
+vehículos, alquiler de inmuebles y otros servicios en general para cumplir 
+dicho objeto; brinda servicios de transporte fluvial en carga de producto de 
+Pucallpa con el compromiso de ofrecer innovación y soluciones con un 
+servicio de excelencia, adaptando nuestros recursos a las necesidades de 
+nuestros clientes, logrando con ello un valor agregado, con presupuestos 
+confortable.</p>
+</contenedor>
+</div>
+</body>
+
+<!-- MAQUINARIA EN VENTA -->
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 400px;
+    }
+    .producto {
+      position: relative;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+     .producto-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .producto-images img {
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.5s ease;
+    }
+
+     .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .arrow:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+    
+
+  </style>
+<body>    
+  <header>
+    <h1>NUESTRO SERVICIO Y VENTA</h1>
+  </header>
+    <div class="producto">
+      <div class="producto-images" id="producto-images">
+<img src="EXCAVADORA 470 LC.png" >
+<img src="EXCAVADORA 350 LC.png" >
+ <img src="carga.jpg">
+<img src="camabaja.jpg">
+<img src="VOLQUETE.png">
+<img src="VOLQUETE Y CARRETA.png" >
+<img src="EXCAVADORA 470 LC.png" >
+<img src="EXCAVADORA 350 LC.png" >
+ <img src="carga.jpg">
+<img src="camabaja.jpg">
+<img src="VOLQUETE.png">
+<img src="VOLQUETE Y CARRETA.png" >
+  </div>
+    <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+   <script>
+    let index = 0;
+    const showSlides= document.querySelectorAll("#producto-images img");
+    const total = slides.length;
+
+    function moveSlide(step) {
+      index = (index + step + total) % total;
+      document.getElementById("producto-images").style.transform = 
+        translateX(${-index * 100}%);
+    }
+  </script>
+</body>
+
+
+  <!-- Objetivo -->
+  <section>
+    <h2>Objetivo</h2>
+    <p>
+      Nuestro objetivo es brindar soluciones de transporte seguras, eficientes y sostenibles,
+      tanto en el ámbito fluvial como terrestre, garantizando la satisfacción de nuestros clientes
+      y aportando al desarrollo de las comunidades donde operamos.
+    </p>
+  </section>
+
+  <!-- Historia -->
+  <section>
+    <h2>Historia de la Empresa</h2>
+    <p>
+      Fundada en 2005, nuestra empresa inició sus operaciones en el transporte fluvial de pasajeros y carga,
+      conectando comunidades a lo largo de los principales ríos de la región amazónica.
+      Con el tiempo, expandimos nuestros servicios al transporte terrestre,
+      ofreciendo soluciones integrales para empresas y particulares.
+    </p>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section>
+    <h2>Misión y Visión</h2>
+    <p><strong>Misión:</strong> Ofrecer un servicio de transporte confiable, seguro y accesible, 
+    que contribuya al bienestar de nuestros clientes y al progreso de la región.</p>
+    <br>
+    <p><strong>Visión:</strong> Ser reconocidos como la empresa líder en transporte multimodal,
+    destacando por nuestra innovación, calidad de servicio y compromiso ambiental.</p>
+  </section>
+
+  <!-- Videos -->
+  <section>
+    <h2>Videos</h2>
+    <div class="videos">
+      <iframe src="video1.mp4" allowfullscreen></iframe>
+      <iframe src="video3.mp4" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+  
+<!-- Font Awesome (CDN) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Redes sociales -->
+  
+<div class="social-icons">
+  <a href="https://www.facebook.com/share/1CebyLp12o/" width="1000" height="1000" alt="1000" class="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/industriayservicioskarokinasac?igsh=MW8yNG5iMmxtMmo4aQ==" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.tiktok.com/@inserkarolinasac?_t=ZS-8z6Aojuvgig&amp;_r=1" target="_blank" class="tiktok" target="_blank" rel="noopener noreferrer" aria-label="tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://wa.me/51932733439>" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<style>
+.social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Colores oficiales */
+.facebook { background: #1877F2; }   /* Azul Facebook */
+.instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}  /* Degradado oficial Instagram */
+.tiktok { background: #171818; }   /* Azul Twitter */
+.whatsapp { background: #25D366; } /* Verde WhatsApp */
+</style>
+
+  <script>
+    // Carousel automático
+    let index=0;
+    const slides=document.querySelectorAll('.carousel img');
+    function showSlides(){
+      slides.forEach((img,i)=>img.classList.remove('active'));
+      index=(index+1)%slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(showSlides,4000);
+  </script>
+</body>
+
+<!-- MAQUINARIA EN VENTA -->
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 400px;
+    }
+    .producto {
+      position: relative;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+     .producto-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .producto-images img {
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.5s ease;
+    }
+
+     .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .arrow:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+    
+
+  </style>
+<body>    
+  <header>
+    <h1>NUESTRO SERVICIO Y VENTA</h1>
+  </header>
+    <div class="producto">
+      <div class="producto-images" id="producto-images">
+<img src="EXCAVADORA 470 LC.png" >
+<img src="EXCAVADORA 350 LC.png" >
+ <img src="carga.jpg">
+<img src="camabaja.jpg">
+<img src="VOLQUETE.png">
+<img src="VOLQUETE Y CARRETA.png" >
+<img src="EXCAVADORA 470 LC.png" >
+<img src="EXCAVADORA 350 LC.png" >
+ <img src="carga.jpg">
+<img src="camabaja.jpg">
+<img src="VOLQUETE.png">
+<img src="VOLQUETE Y CARRETA.png" >
+  </div>
+    <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+   <script>
+    let index = 0;
+    const showSlides= document.querySelectorAll("#producto-images img");
+    const total = slides.length;
+
+    function moveSlide(step) {
+      index = (index + step + total) % total;
+      document.getElementById("producto-images").style.transform = 
+        translateX(${-index * 100}%);
+    }
+  </script>
+</body>
+
+
+  <!-- Conoce de mi -->
+
+<style>
+    
+    body{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 1.6;
+        color: #0f0f0f;
+        
+    }
+
+contenedor{
+    padding: 10px;
+    height: 300px;
+    color: #f0e3e3;
+ 
+}
+contenedor h3{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+contenedor p{
+    font-size: 18px;
+    text-align:center;
+}
+.contenedor-1{
+    position: relative;
+        display:flex;
+        padding: 80px;
+        height:480px;
+        background-color:rgb(7, 7, 7);
+        text-align: left;
+    }
+
+</style>
+<body>
+<div class="contenedor-1">
+    <img src="trabajando.png" width="1000">
+
+<contenedor>
+    <h3>CONOCE MÁS DE MI</h3>
+<p>Somos una empresa dedicada al alquiler de maquinaria, alquiler de 
+vehículos, alquiler de inmuebles y otros servicios en general para cumplir 
+dicho objeto; brinda servicios de transporte fluvial en carga de producto de 
+Pucallpa con el compromiso de ofrecer innovación y soluciones con un 
+servicio de excelencia, adaptando nuestros recursos a las necesidades de 
+nuestros clientes, logrando con ello un valor agregado, con presupuestos 
+confortable.</p>
+</contenedor>
+</div>
+</body>
+
+</html>
