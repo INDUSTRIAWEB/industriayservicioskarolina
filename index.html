@@ -52,8 +52,14 @@
     }
     @keyframes fade{from{opacity:0.4}to{opacity:1}}
 
-    section{padding:50px 20px;max-width:1000px;margin:auto;}
-    section h2{color:#004aad;margin-bottom:20px;text-align:center;}
+    section{
+      padding:50px 20px;
+      max-width:1000px;
+      margin:auto;}
+    section h2{
+      color:#004aad;
+      margin-bottom:20px;
+      text-align:center;}
 
     /* Videos */
     .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
@@ -69,19 +75,19 @@
 <body>
   <header>
     <h1>INDUSTRIA Y SERVICIOS KAROLINA SAC</h1>
-    <p>Transporte Fluvil y Terrestre</p>
+    <p>Transporte Fluvial y Terrestre</p>
     <br>
     <p>Conectando caminos y ríos, uniendo destinos</p>
   </header>
   <!-- Carousel -->
   <div class="carousel">
     <img src="embarcacion2.jpeg" class="active">
-    <img src="contodolluvia.jpeg">
-    <img src="barcaza.jpeg" >
-    <img src="470.jpeg">
-    <img src="350.jpeg">
-    <img src="vyc.jpeg">
-    <img src="vol.jpeg">
+    <img src="contodolluvia.jpeg" class="active">
+    <img src="barcaza.jpeg" class="active">
+    <img src="470.jpeg" class="active">
+    <img src="350.jpeg" class="active">
+    <img src="vyc.jpeg" class="active">
+    <img src="vol.jpeg" class="active">
   </div>
  
     <!-- Conoce de mi -->
@@ -96,14 +102,15 @@
     }
 
 contenedor{
-    padding: 10px;
+    padding:50px 20px;
     height: 300px;
+    max-width:1000px;
+    margin:auto;
     color: #f0e3e3;
- 
 }
 contenedor h3{
-    margin-bottom: 40px;
-    font-size: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
     text-align: center;
 }
 contenedor p{
@@ -111,18 +118,29 @@ contenedor p{
     text-align:center;
 }
 .contenedor-1{
-    position: relative;
-        display:flex;
-        padding: 80px;
-        height:480px;
-        background-color:rgb(7, 7, 7);
-        text-align: left;
+      position: relative;
+      display:flex;
+      padding: 20px;
+      background-color:rgb(7, 7, 7);
+      text-align: left;
+      width:100%;
+      max-height:450px;
+      overflow:hidden;
     }
-
+    .contenedor-1 img{
+      width: 400px;;
+      height:400px;
+      object-fit:cover;
+      display:none;
+ }
+  .contenedor-1 img.active{
+      display:block;
+      animation:fade 1.5s;
+    }
 </style>
 <body>
 <div class="contenedor-1">
-    <img src="trabajando.png" width="1000">
+    <img src="trabajando.png" class="active">
 
 <contenedor>
     <h3>CONOCE MÁS DE MI</h3>
@@ -135,18 +153,23 @@ nuestros clientes, logrando con ello un valor agregado, con presupuestos
 confortable.</p>
 </contenedor>
 </div>
-</body>
+
 
 <!-- MAQUINARIA EN VENTA -->
  <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      height: 400px;
+      line-height: 1.6;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0e3e3;
     }
     .producto {
       position: relative;
-      background: white;
-      border-radius: 12px;
+      width: auto;
+      border-radius: 60px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       cursor: pointer;
@@ -157,14 +180,9 @@ confortable.</p>
       transition: transform 0.5s ease-in-out;
     }
     .producto-images img {
-      padding: 10px;
       width: 200px;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.5s ease;
+      flex-shrink: 0;
     }
-
      .arrow {
       position: absolute;
       top: 50%;
@@ -177,20 +195,15 @@ confortable.</p>
       font-size: 20px;
       border-radius: 50%;
     }
-
     .arrow:hover {
       background: rgba(0,0,0,0.8);
     }
-
     .arrow.left {
       left: 10px;
     }
-
     .arrow.right {
       right: 10px;
     }
-    
-
   </style>
 <body>    
   <header>
@@ -203,13 +216,13 @@ confortable.</p>
  <img src="carga.jpg">
 <img src="camabaja.jpg">
 <img src="VOLQUETE.png">
-<img src="VOLQUETE Y CARRETA.png" >
+<img src="carreta.jpeg" >
 <img src="EXCAVADORA 470 LC.png" >
 <img src="EXCAVADORA 350 LC.png" >
  <img src="carga.jpg">
 <img src="camabaja.jpg">
 <img src="VOLQUETE.png">
-<img src="VOLQUETE Y CARRETA.png" >
+<img src="carreta.jpeg" >
   </div>
     <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
     <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
@@ -217,7 +230,7 @@ confortable.</p>
 
    <script>
     let index = 0;
-    const showSlides= document.querySelectorAll("#producto-images img");
+    const showSlides= document.querySelectorAll("#producto-images");
     const total = slides.length;
 
     function moveSlide(step) {
@@ -226,8 +239,6 @@ confortable.</p>
         translateX(${-index * 100}%);
     }
   </script>
-</body>
-
 
   <!-- Objetivo -->
   <section>
@@ -243,7 +254,7 @@ confortable.</p>
   <section>
     <h2>Historia de la Empresa</h2>
     <p>
-      Fundada en 2005, nuestra empresa inició sus operaciones en el transporte fluvial de pasajeros y carga,
+      Fundada en 2005, nuestra empresa inició sus operaciones en el transporte fluvial de carga,
       conectando comunidades a lo largo de los principales ríos de la región amazónica.
       Con el tiempo, expandimos nuestros servicios al transporte terrestre,
       ofreciendo soluciones integrales para empresas y particulares.
@@ -286,7 +297,7 @@ confortable.</p>
   <a href="https://www.tiktok.com/@inserkarolinasac?_t=ZS-8z6Aojuvgig&amp;_r=1" target="_blank" class="tiktok" target="_blank" rel="noopener noreferrer" aria-label="tiktok">
     <i class="fab fa-tiktok"></i>
   </a>
-  <a href="https://wa.me/51932733439>" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <a href="https://wa.me/51932733439" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </div>
@@ -337,150 +348,6 @@ confortable.</p>
     setInterval(showSlides,4000);
   </script>
 </body>
-
-<!-- MAQUINARIA EN VENTA -->
- <style>
-    body {
-      font-family: Arial, sans-serif;
-      height: 400px;
-    }
-    .producto {
-      position: relative;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-     .producto-images {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .producto-images img {
-      padding: 10px;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.5s ease;
-    }
-
-     .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 12px;
-      cursor: pointer;
-      font-size: 20px;
-      border-radius: 50%;
-    }
-
-    .arrow:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
-    .arrow.left {
-      left: 10px;
-    }
-
-    .arrow.right {
-      right: 10px;
-    }
-    
-
-  </style>
-<body>    
-  <header>
-    <h1>NUESTRO SERVICIO Y VENTA</h1>
-  </header>
-    <div class="producto">
-      <div class="producto-images" id="producto-images">
-<img src="EXCAVADORA 470 LC.png" >
-<img src="EXCAVADORA 350 LC.png" >
- <img src="carga.jpg">
-<img src="camabaja.jpg">
-<img src="VOLQUETE.png">
-<img src="VOLQUETE Y CARRETA.png" >
-<img src="EXCAVADORA 470 LC.png" >
-<img src="EXCAVADORA 350 LC.png" >
- <img src="carga.jpg">
-<img src="camabaja.jpg">
-<img src="VOLQUETE.png">
-<img src="VOLQUETE Y CARRETA.png" >
-  </div>
-    <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
-  </div>
-
-   <script>
-    let index = 0;
-    const showSlides= document.querySelectorAll("#producto-images img");
-    const total = slides.length;
-
-    function moveSlide(step) {
-      index = (index + step + total) % total;
-      document.getElementById("producto-images").style.transform = 
-        translateX(${-index * 100}%);
-    }
-  </script>
 </body>
-
-
-  <!-- Conoce de mi -->
-
-<style>
-    
-    body{
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        line-height: 1.6;
-        color: #0f0f0f;
-        
-    }
-
-contenedor{
-    padding: 10px;
-    height: 300px;
-    color: #f0e3e3;
- 
-}
-contenedor h3{
-    margin-bottom: 40px;
-    font-size: 30px;
-    text-align: center;
-}
-contenedor p{
-    font-size: 18px;
-    text-align:center;
-}
-.contenedor-1{
-    position: relative;
-        display:flex;
-        padding: 80px;
-        height:480px;
-        background-color:rgb(7, 7, 7);
-        text-align: left;
-    }
-
-</style>
-<body>
-<div class="contenedor-1">
-    <img src="trabajando.png" width="1000">
-
-<contenedor>
-    <h3>CONOCE MÁS DE MI</h3>
-<p>Somos una empresa dedicada al alquiler de maquinaria, alquiler de 
-vehículos, alquiler de inmuebles y otros servicios en general para cumplir 
-dicho objeto; brinda servicios de transporte fluvial en carga de producto de 
-Pucallpa con el compromiso de ofrecer innovación y soluciones con un 
-servicio de excelencia, adaptando nuestros recursos a las necesidades de 
-nuestros clientes, logrando con ello un valor agregado, con presupuestos 
-confortable.</p>
-</contenedor>
-</div>
 </body>
-
 </html>
